@@ -8,10 +8,15 @@ import { services } from "@/data/services";
 export function BookingModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [submitted, setSubmitted] = useState(false);
 
+  const handleClose = () => {
+    onClose();
+    setSubmitted(false);
+  };
+
   useEffect(() => {
     if (!open) return;
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
+      if (e.key === "Escape") handleClose();
     };
     document.addEventListener("keydown", onKeyDown);
     const previousOverflow = document.body.style.overflow;
@@ -20,10 +25,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
       document.removeEventListener("keydown", onKeyDown);
       document.body.style.overflow = previousOverflow;
     };
-  }, [open, onClose]);
-
-  useEffect(() => {
-    if (!open) setSubmitted(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   if (!open) return null;
@@ -35,13 +37,13 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
       aria-label="Book an appointment"
       className="fixed inset-0 z-[80] flex items-center justify-center bg-stone-800/70 p-4 backdrop-blur-sm"
       onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
+        if (e.target === e.currentTarget) handleClose();
       }}
     >
-      <div className="relative w-full max-w-md rounded-3xl bg-white p-7 shadow-2xl">
+      <div className="relative w-full max-w-md border border-sand-dark bg-white p-7">
         <button
           type="button"
-          onClick={onClose}
+          onClick={handleClose}
           aria-label="Close"
           className="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full text-stone-500 transition-colors hover:bg-sand hover:text-stone-800"
         >
@@ -53,15 +55,15 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-100 text-primary-600">
               <CheckCircle2 size={28} />
             </span>
-            <h3 className="mt-5 text-xl font-bold text-stone-800">Request received</h3>
+            <h3 className="mt-5 text-xl font-medium text-stone-800">Request received</h3>
             <p className="mt-2 text-sm leading-relaxed text-stone-600">
               This is a demo booking form — no request was actually sent. On the real site
               we&rsquo;ll confirm your dog&rsquo;s appointment by phone within one business day.
             </p>
             <button
               type="button"
-              onClick={onClose}
-              className="mt-6 rounded-full bg-primary-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
+              onClick={handleClose}
+              className="mt-6 rounded-md bg-primary-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
             >
               Done
             </button>
@@ -72,7 +74,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
               <CalendarCheck size={18} />
               <p className="text-xs font-semibold uppercase tracking-[0.2em]">Book Appointment</p>
             </div>
-            <h3 className="text-xl font-bold text-stone-800">Request a time at {business.shortName}</h3>
+            <h3 className="text-xl font-medium text-stone-800">Request a time at {business.shortName}</h3>
             <p className="mt-1.5 text-sm text-stone-600">
               Demo form — submitting will not send a real request or email.
             </p>
@@ -91,7 +93,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                     type="text"
                     required
                     placeholder="Jamie Rivera"
-                    className="rounded-xl border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                    className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                   />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-medium text-stone-700">
@@ -100,7 +102,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                     type="text"
                     required
                     placeholder="Biscuit"
-                    className="rounded-xl border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                    className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                   />
                 </label>
               </div>
@@ -111,7 +113,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                   type="tel"
                   required
                   placeholder="(905) 555-0142"
-                  className="rounded-xl border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                  className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                 />
               </label>
 
@@ -120,7 +122,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                 <select
                   required
                   defaultValue=""
-                  className="rounded-xl border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                  className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                 >
                   <option value="" disabled>
                     Select a service
@@ -137,13 +139,13 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                 Preferred date
                 <input
                   type="date"
-                  className="rounded-xl border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                  className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                 />
               </label>
 
               <button
                 type="submit"
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-primary-600/20 transition-all hover:bg-primary-700"
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-700"
               >
                 <CalendarCheck size={16} />
                 Request Appointment

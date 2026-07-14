@@ -15,10 +15,10 @@ export function BookingCTA() {
   const { openBookingModal } = useBookingModal();
 
   return (
-    <section id="booking" className="bg-stone-800 bg-dog-pattern-dark py-20 lg:py-24">
+    <section id="booking" className="bg-stone-800 py-20 lg:py-24">
       <Container>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
             Book your dog&rsquo;s appointment today
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/70 sm:text-lg">
@@ -31,7 +31,7 @@ export function BookingCTA() {
             <button
               type="button"
               onClick={openBookingModal}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary-600/30 transition-all hover:bg-primary-700 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-600 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-primary-700 sm:w-auto"
             >
               <Phone size={18} />
               Call {business.phone}
@@ -40,7 +40,7 @@ export function BookingCTA() {
               href={business.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-white/10 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-white/10 sm:w-auto"
             >
               <MessageCircle size={18} />
               Message to Book Online

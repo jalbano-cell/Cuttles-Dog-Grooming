@@ -1,29 +1,20 @@
-import { AtSign, MapPin, Phone, PawPrint } from "lucide-react";
+import { AtSign, MapPin, Phone } from "lucide-react";
 import { business } from "@/data/business";
 import { Container } from "@/components/ui/Container";
 
-const pawRotations = [-15, 10, -8, 16, -12, 8];
-
 export function Footer() {
   return (
-    <footer className="relative bg-stone-800 bg-dog-pattern-dark pb-28 pt-14 text-white/70 lg:pb-14">
-      <div aria-hidden>
-        <Container className="flex justify-center gap-6 pb-8 opacity-40 sm:justify-start">
-          {pawRotations.map((rotate, i) => (
-            <PawPrint
-              key={i}
-              size={14}
-              style={{ transform: `rotate(${rotate}deg)` }}
-              className="text-playful-400"
-            />
-          ))}
-        </Container>
-      </div>
+    <footer className="bg-stone-800 pb-28 pt-14 text-white/70 lg:pb-14">
       <Container>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="font-display text-xl font-extrabold text-white">Cuttles</p>
-            <p className="mt-3 text-sm leading-relaxed">
+            <div className="flex items-center gap-3">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary-600 font-display text-sm italic text-white">
+                C
+              </span>
+              <p className="font-display text-lg font-medium text-white">Cuttles</p>
+            </div>
+            <p className="mt-4 text-sm leading-relaxed">
               Premium, calm dog grooming and a curated pet boutique in{" "}
               {business.address.city} — trusted by pet parents across the
               region.

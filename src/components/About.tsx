@@ -8,10 +8,10 @@ export function About() {
   const portrait = getImage("about-groomer-portrait.jpg");
 
   return (
-    <section id="about" className="bg-white bg-dog-pattern py-20 lg:py-28">
+    <section id="about" className="bg-white py-20 lg:py-28">
       <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
         <div className="relative mx-auto w-full max-w-sm lg:mx-0">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-xl ring-1 ring-stone-800/5">
+          <div className="relative aspect-[4/5] overflow-hidden border border-sand-dark">
             <Image
               src={`/images/${portrait.filename}`}
               alt={portrait.alt}
@@ -21,8 +21,8 @@ export function About() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-6 -right-6 hidden rounded-2xl bg-primary-600 p-4 text-white shadow-xl sm:block">
-            <p className="flex items-center gap-2 text-sm font-bold">
+          <div className="absolute -bottom-5 -right-5 hidden bg-primary-600 p-4 text-white sm:block">
+            <p className="flex items-center gap-2 text-sm font-semibold">
               <Award size={16} />
               Certified Pet Stylist
             </p>
@@ -30,10 +30,11 @@ export function About() {
         </div>
 
         <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary-600">
+          <p className="mb-3 flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-primary-600">
+            <span className="rule" />
             About Our Studio
           </p>
-          <h2 className="text-3xl font-bold tracking-tight text-stone-800 sm:text-4xl">
+          <h2 className="text-3xl font-medium tracking-tight text-stone-800 sm:text-4xl">
             A neighborhood grooming studio built on trust, care, and craft
           </h2>
           <p className="mt-6 text-base leading-relaxed text-stone-600">

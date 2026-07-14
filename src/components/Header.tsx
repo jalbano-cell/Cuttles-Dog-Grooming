@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, PawPrint } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import clsx from "clsx";
 import { business } from "@/data/business";
 import { Container } from "@/components/ui/Container";
@@ -39,16 +39,17 @@ export function Header() {
       )}
     >
       <Container className="flex h-18 items-center justify-between py-3">
-        <Link href="#top" className="group flex items-baseline gap-2">
-          <PawPrint
-            size={22}
-            className="mb-0.5 shrink-0 -rotate-12 text-playful-500 transition-transform duration-300 group-hover:animate-wag"
-          />
-          <span className="font-display text-xl font-extrabold tracking-tight text-stone-800">
-            Cuttles
+        <Link href="#top" className="flex items-center gap-3">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary-600 font-display text-base italic text-white">
+            C
           </span>
-          <span className="hidden text-xs font-medium text-primary-600 sm:inline">
-            Grooming &amp; Boutique
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-lg font-semibold tracking-tight text-stone-800">
+              Cuttles
+            </span>
+            <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-stone-500">
+              Grooming &amp; Boutique
+            </span>
           </span>
         </Link>
 
@@ -75,7 +76,7 @@ export function Header() {
           <button
             type="button"
             onClick={openBookingModal}
-            className="rounded-full bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-700 hover:shadow-md"
+            className="rounded-md bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-700 hover:shadow-md"
           >
             Book Appointment
           </button>
@@ -83,7 +84,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-full text-stone-800 lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-md text-stone-800 lg:hidden"
           onClick={() => setMenuOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
@@ -108,7 +109,7 @@ export function Header() {
             <div className="mt-3 flex flex-col gap-2 px-3">
               <a
                 href={business.phoneHref}
-                className="flex items-center justify-center gap-2 rounded-full border border-primary-600 px-5 py-2.5 text-sm font-semibold text-primary-600"
+                className="flex items-center justify-center gap-2 rounded-md border border-primary-600 px-5 py-2.5 text-sm font-semibold text-primary-600"
               >
                 <Phone size={16} />
                 Call Now
@@ -119,7 +120,7 @@ export function Header() {
                   setMenuOpen(false);
                   openBookingModal();
                 }}
-                className="rounded-full bg-primary-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
+                className="rounded-md bg-primary-600 px-5 py-2.5 text-center text-sm font-semibold text-white"
               >
                 Book Appointment
               </button>
