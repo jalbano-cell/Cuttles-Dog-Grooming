@@ -1,0 +1,191 @@
+[
+  {
+    "filename": "hero-dog-grooming.jpg",
+    "subject": "Smiling groomer posing with a freshly groomed dog wearing a bandana",
+    "aspectRatio": "16:9",
+    "width": 1600,
+    "height": 900,
+    "alt": "Smiling groomer posing with a freshly groomed dog wearing a bandana",
+    "tone": "primary"
+  },
+  {
+    "filename": "service-full-grooming.jpg",
+    "subject": "Freshly groomed fluffy dog wearing a bandana after a full groom",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Freshly groomed fluffy dog wearing a bandana, sitting on a grooming table",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-bath-brush.jpg",
+    "subject": "Soapy dog getting a bath in a grooming tub",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Soapy dog getting a bath in a grooming tub",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-nail-trim.jpg",
+    "subject": "Close-up of a groomer trimming a dog's nails with clippers",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Close-up of a groomer trimming a dog's nails with clippers",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-ear-cleaning.jpg",
+    "subject": "Groomer gently cleaning a dog's ear with a wipe",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Groomer gently cleaning a dog's ear with a wipe",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-deshedding.jpg",
+    "subject": "Groomer de-shedding a dog's coat with a slicker brush",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Groomer de-shedding a dog's coat with a slicker brush",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-puppy-grooming.jpg",
+    "subject": "Groomer combing and trimming a puppy's coat",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Groomer combing and trimming a puppy's coat",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-teeth-cleaning.jpg",
+    "subject": "Groomer cleaning a dog's teeth with a finger toothbrush",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Groomer cleaning a dog's teeth with a finger toothbrush",
+    "tone": "sand"
+  },
+  {
+    "filename": "service-flea-tick.jpg",
+    "subject": "Applying a spot-on flea and tick treatment to a dog's coat",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Applying a spot-on flea and tick treatment to a dog's coat",
+    "tone": "sand"
+  },
+  {
+    "filename": "boutique-bandanas.jpg",
+    "subject": "Display of dog bandanas and bows in the boutique",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Display of dog bandanas and bows in the boutique",
+    "tone": "boutique"
+  },
+  {
+    "filename": "boutique-leashes.jpg",
+    "subject": "Wall display of leashes and collars in the boutique",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Wall display of leashes and collars in the boutique",
+    "tone": "boutique"
+  },
+  {
+    "filename": "boutique-shampoos.jpg",
+    "subject": "Shelf of grooming shampoo and spray bottles in the boutique",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Shelf of grooming shampoo and spray bottles in the boutique",
+    "tone": "boutique"
+  },
+  {
+    "filename": "boutique-apparel.jpg",
+    "subject": "Rack of dog sweaters and coats in the boutique",
+    "aspectRatio": "1:1",
+    "width": 800,
+    "height": 800,
+    "alt": "Rack of dog sweaters and coats in the boutique",
+    "tone": "boutique"
+  },
+  {
+    "filename": "gallery-before-01.jpg",
+    "subject": "Goldendoodle with an overgrown, matted coat before grooming",
+    "aspectRatio": "3:4",
+    "width": 900,
+    "height": 1200,
+    "alt": "Goldendoodle with an overgrown, matted coat before grooming",
+    "tone": "stone"
+  },
+  {
+    "filename": "gallery-after-01.jpg",
+    "subject": "Goldendoodle with a neat, fluffy trimmed coat after grooming",
+    "aspectRatio": "3:4",
+    "width": 900,
+    "height": 1200,
+    "alt": "Goldendoodle with a neat, fluffy trimmed coat after grooming",
+    "tone": "fresh"
+  },
+  {
+    "filename": "gallery-before-02.jpg",
+    "subject": "Shih Tzu with a wet, matted coat before grooming",
+    "aspectRatio": "3:4",
+    "width": 900,
+    "height": 1200,
+    "alt": "Shih Tzu with a wet, matted coat before grooming",
+    "tone": "stone"
+  },
+  {
+    "filename": "gallery-after-02.jpg",
+    "subject": "Shih Tzu with a neat, trimmed coat and bow after grooming",
+    "aspectRatio": "3:4",
+    "width": 900,
+    "height": 1200,
+    "alt": "Shih Tzu with a neat, trimmed coat and bow after grooming",
+    "tone": "fresh"
+  },
+  {
+    "filename": "gallery-before-03.jpg",
+    "subject": "Cockapoo mid-bath, covered in shampoo suds",
+    "aspectRatio": "3:4",
+    "width": 900,
+    "height": 1200,
+    "alt": "Cockapoo mid-bath, covered in shampoo suds",
+    "tone": "stone"
+  },
+  {
+    "filename": "gallery-after-03.jpg",
+    "subject": "Cockapoo with a fluffy, rounded breed-standard cut after grooming",
+    "aspectRatio": "3:4",
+    "width": 900,
+    "height": 1200,
+    "alt": "Cockapoo with a fluffy, rounded breed-standard cut after grooming",
+    "tone": "fresh"
+  },
+  {
+    "filename": "about-groomer-portrait.jpg",
+    "subject": "Portrait of the head groomer with a client dog",
+    "aspectRatio": "4:5",
+    "width": 800,
+    "height": 1000,
+    "alt": "Portrait of Cuttles' head groomer with a client dog",
+    "tone": "stone"
+  },
+  {
+    "filename": "contact-facility-exterior.jpg",
+    "subject": "Exterior storefront of Cuttles Dog Grooming & Boutique on Lakeshore Rd in Oakville",
+    "aspectRatio": "16:9",
+    "width": 1600,
+    "height": 900,
+    "alt": "Exterior storefront of Cuttles Dog Grooming & Boutique on Lakeshore Rd in Oakville",
+    "tone": "primary"
+  }
+]
