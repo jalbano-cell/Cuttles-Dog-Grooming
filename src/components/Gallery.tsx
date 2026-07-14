@@ -35,12 +35,12 @@ export function Gallery() {
 
         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
           {gallery.map((pair) => (
-            <div key={pair.id} className="border border-sand-dark bg-white">
+            <div className="group overflow-hidden rounded-2xl border border-sand-dark bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-lg" key={pair.id}>
               <div className="grid grid-cols-2 gap-px bg-sand-dark">
                 <button
                   type="button"
                   onClick={() => setLightboxImage({ src: pair.before, alt: pair.beforeAlt })}
-                  className="relative aspect-[3/4] cursor-zoom-in"
+                  className="relative aspect-[3/4] cursor-zoom-in overflow-hidden"
                 >
                   <Image
                     src={pair.before}
@@ -48,16 +48,16 @@ export function Gallery() {
                     fill
                     loading="lazy"
                     sizes="(min-width: 768px) 16vw, 45vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute left-2 top-2 bg-stone-800/80 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+                  <span className="absolute left-2 top-2 rounded-full bg-stone-800/80 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
                     Before
                   </span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setLightboxImage({ src: pair.after, alt: pair.afterAlt })}
-                  className="relative aspect-[3/4] cursor-zoom-in"
+                  className="relative aspect-[3/4] cursor-zoom-in overflow-hidden"
                 >
                   <Image
                     src={pair.after}
@@ -65,9 +65,9 @@ export function Gallery() {
                     fill
                     loading="lazy"
                     sizes="(min-width: 768px) 16vw, 45vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute left-2 top-2 bg-primary-600/90 px-2 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+                  <span className="absolute left-2 top-2 rounded-full bg-primary-600/90 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
                     After
                   </span>
                 </button>

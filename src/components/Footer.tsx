@@ -1,16 +1,17 @@
-import { AtSign, MapPin, Phone } from "lucide-react";
+import { AtSign, MapPin, Phone, Scissors } from "lucide-react";
 import { business } from "@/data/business";
 import { Container } from "@/components/ui/Container";
 
 export function Footer() {
   return (
-    <footer className="bg-stone-800 pb-28 pt-14 text-white/70 lg:pb-14">
-      <Container>
+    <footer className="bg-stone-800 pb-28 text-white/70 lg:pb-14">
+      <div aria-hidden className="h-1.5 w-full bg-gradient-to-r from-primary-600 via-playful-500 to-boutique-500" />
+      <Container className="pt-14">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary-600 font-display text-sm italic text-white">
-                C
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-600 text-white">
+                <Scissors size={14} />
               </span>
               <p className="font-display text-lg font-medium text-white">Cuttles</p>
             </div>

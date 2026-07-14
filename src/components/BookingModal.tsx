@@ -40,7 +40,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
         if (e.target === e.currentTarget) handleClose();
       }}
     >
-      <div className="relative w-full max-w-md border border-sand-dark bg-white p-7">
+      <div className="relative w-full max-w-md rounded-2xl border border-sand-dark bg-white p-7">
         <button
           type="button"
           onClick={handleClose}
@@ -63,7 +63,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
             <button
               type="button"
               onClick={handleClose}
-              className="mt-6 rounded-md bg-primary-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
+              className="mt-6 rounded-xl bg-primary-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
             >
               Done
             </button>
@@ -93,7 +93,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                     type="text"
                     required
                     placeholder="Jamie Rivera"
-                    className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                    className="rounded-lg border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                   />
                 </label>
                 <label className="flex flex-col gap-1.5 text-sm font-medium text-stone-700">
@@ -102,7 +102,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                     type="text"
                     required
                     placeholder="Biscuit"
-                    className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                    className="rounded-lg border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                   />
                 </label>
               </div>
@@ -113,7 +113,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                   type="tel"
                   required
                   placeholder="(905) 555-0142"
-                  className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                  className="rounded-lg border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                 />
               </label>
 
@@ -122,7 +122,7 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                 <select
                   required
                   defaultValue=""
-                  className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                  className="rounded-lg border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                 >
                   <option value="" disabled>
                     Select a service
@@ -139,13 +139,13 @@ export function BookingModal({ open, onClose }: { open: boolean; onClose: () => 
                 Preferred date
                 <input
                   type="date"
-                  className="rounded-md border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
+                  className="rounded-lg border border-sand-dark bg-cream px-3.5 py-2.5 text-sm text-stone-800 outline-none transition-colors focus:border-primary-500"
                 />
               </label>
 
               <button
                 type="submit"
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-md bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-700"
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-primary-700"
               >
                 <CalendarCheck size={16} />
                 Request Appointment

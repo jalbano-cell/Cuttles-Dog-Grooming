@@ -26,12 +26,19 @@ export function TrustBar() {
     },
   ];
 
+  const badgeStyles = [
+    "bg-primary-600/10 text-primary-600",
+    "bg-playful-500/15 text-playful-600",
+    "bg-accent-500/15 text-accent-600",
+    "bg-boutique-500/15 text-boutique-600",
+  ];
+
   return (
     <section className="border-y border-sand-dark bg-cream py-8">
       <Container className="grid grid-cols-2 divide-sand-dark sm:grid-cols-4 sm:divide-x">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <div key={item.label} className="flex items-center gap-3 px-0 sm:px-6 sm:first:pl-0">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent-500/10 text-accent-600">
+            <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${badgeStyles[index % badgeStyles.length]}`}>
               <item.icon size={18} />
             </span>
             <div className="min-w-0">

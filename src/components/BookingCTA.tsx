@@ -31,7 +31,7 @@ export function BookingCTA() {
             <button
               type="button"
               onClick={openBookingModal}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-600 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-primary-700 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary-600 px-7 py-3.5 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-primary-700 sm:w-auto"
             >
               <Phone size={18} />
               Call {business.phone}
@@ -40,7 +40,7 @@ export function BookingCTA() {
               href={business.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-all hover:bg-white/10 sm:w-auto"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 px-7 py-3.5 text-base font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto"
             >
               <MessageCircle size={18} />
               Message to Book Online

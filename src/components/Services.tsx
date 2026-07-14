@@ -41,11 +41,14 @@ export function Services() {
           description="Premium care backed by certified technique — book a single service or a full spa day."
         />
 
-        <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden border border-sand-dark bg-sand-dark sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => {
             const Icon = iconMap[service.icon];
             return (
-              <div key={service.slug} className="group flex flex-col bg-white">
+              <div
+                key={service.slug}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-sand-dark bg-white transition-all duration-300 hover:-translate-y-1 hover:border-primary-300 hover:shadow-lg"
+              >
                 <div className="relative aspect-square overflow-hidden">
                   <Image
                     src={service.image}
@@ -53,14 +56,14 @@ export function Services() {
                     fill
                     loading="lazy"
                     sizes="(min-width: 1024px) 280px, (min-width: 640px) 45vw, 90vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110 group-hover:rotate-1"
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <div className="flex items-center gap-2 text-primary-600">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-50 text-primary-600 transition-transform group-hover:animate-wiggle">
                     <Icon size={16} />
-                  </div>
-                  <h3 className="mt-2 text-base font-medium text-stone-800">{service.name}</h3>
+                  </span>
+                  <h3 className="mt-3 text-base font-medium text-stone-800">{service.name}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-stone-600">
                     {service.description}
                   </p>
@@ -70,7 +73,7 @@ export function Services() {
                     className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 transition-colors group-hover:text-primary-700"
                   >
                     Book Now
-                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>

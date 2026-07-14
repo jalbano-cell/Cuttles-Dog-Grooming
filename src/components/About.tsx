@@ -11,7 +11,7 @@ export function About() {
     <section id="about" className="bg-white py-20 lg:py-28">
       <Container className="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
         <div className="relative mx-auto w-full max-w-sm lg:mx-0">
-          <div className="relative aspect-[4/5] overflow-hidden border border-sand-dark">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-sand-dark">
             <Image
               src={`/images/${portrait.filename}`}
               alt={portrait.alt}
@@ -21,7 +21,7 @@ export function About() {
               className="object-cover"
             />
           </div>
-          <div className="absolute -bottom-5 -right-5 hidden bg-primary-600 p-4 text-white sm:block">
+          <div className="absolute -bottom-5 -right-5 hidden -rotate-3 rounded-xl bg-primary-600 p-4 text-white shadow-md sm:block">
             <p className="flex items-center gap-2 text-sm font-semibold">
               <Award size={16} />
               Certified Pet Stylist

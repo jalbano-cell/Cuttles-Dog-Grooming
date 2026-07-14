@@ -76,6 +76,11 @@
 
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
   --animate-rise: rise 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-bob: bob 3.4s ease-in-out infinite;
+  --animate-bob-slow: bob 4.2s ease-in-out infinite;
+  --animate-snip: snip 0.5s ease-in-out;
+  --animate-wiggle: wiggle 0.5s ease-in-out;
+  --animate-marquee: marquee 26s linear infinite;
 
   @keyframes fade-up {
     from {
@@ -96,6 +101,54 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0) rotate(var(--bob-rotate, 0deg));
+    }
+    50% {
+      transform: translateY(-8px) rotate(var(--bob-rotate, 0deg));
+    }
+  }
+
+  @keyframes snip {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-18deg);
+    }
+    50% {
+      transform: rotate(4deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+  }
+
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+    30% {
+      transform: rotate(-6deg) scale(1.06);
+    }
+    60% {
+      transform: rotate(5deg) scale(1.06);
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
     }
   }
 }
@@ -127,4 +180,11 @@ h4 {
   width: 28px;
   height: 2px;
   background: var(--color-primary-600);
+}
+
+/* Scattered soap-bubble texture, used sparingly for a bath/grooming feel */
+.bg-suds-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='rgb(156,51,46)' stroke-opacity='0.14' stroke-width='2'%3E%3Ccircle cx='24' cy='30' r='10'/%3E%3Ccircle cx='60' cy='16' r='5'/%3E%3Ccircle cx='150' cy='40' r='13'/%3E%3Ccircle cx='120' cy='90' r='6'/%3E%3Ccircle cx='40' cy='120' r='9'/%3E%3Ccircle cx='95' cy='150' r='5'/%3E%3Ccircle cx='170' cy='150' r='11'/%3E%3Ccircle cx='10' cy='175' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
 }

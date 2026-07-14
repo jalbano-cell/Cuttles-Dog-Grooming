@@ -16,15 +16,18 @@ export function Boutique() {
 
         <div className="mt-14 grid grid-cols-1 divide-y divide-white/15 border-y border-white/15 sm:grid-cols-2 sm:divide-x sm:divide-y-0">
           {boutiqueCategories.map((category) => (
-            <div key={category.slug} className="flex items-center gap-5 py-6 sm:px-8">
-              <div className="relative h-20 w-20 shrink-0 overflow-hidden">
+            <div
+              key={category.slug}
+              className="group flex items-center gap-5 border-l-2 border-transparent py-6 transition-colors hover:border-l-playful-500 hover:bg-white/5 sm:px-8"
+            >
+              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl">
                 <Image
                   src={category.image}
                   alt={category.alt}
                   fill
                   loading="lazy"
                   sizes="80px"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div>

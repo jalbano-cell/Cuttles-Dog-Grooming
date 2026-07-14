@@ -55,7 +55,7 @@ export function Reviews() {
               type="button"
               onClick={prev}
               aria-label="Previous review"
-              className="flex h-9 w-9 items-center justify-center border border-white/25 text-white transition-colors hover:bg-white/10"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-all hover:-translate-y-0.5 hover:bg-white/10"
             >
               <ChevronLeft size={16} />
             </button>
@@ -63,7 +63,7 @@ export function Reviews() {
               type="button"
               onClick={next}
               aria-label="Next review"
-              className="flex h-9 w-9 items-center justify-center border border-white/25 text-white transition-colors hover:bg-white/10"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 text-white transition-all hover:-translate-y-0.5 hover:bg-white/10"
             >
               <ChevronRight size={16} />
             </button>
@@ -73,8 +73,8 @@ export function Reviews() {
                   key={t.name + i}
                   aria-label={`Go to review ${i + 1}`}
                   onClick={() => setIndex(i)}
-                  className={`h-1 transition-all ${
-                    i === index ? "w-6 bg-white" : "w-2.5 bg-white/30"
+                  className={`h-1.5 rounded-full transition-all ${
+                    i === index ? "w-6 bg-playful-400" : "w-1.5 bg-white/30"
                   }`}
                 />
               ))}
